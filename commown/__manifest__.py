@@ -31,6 +31,7 @@
         'website_sale_b2b',
         'website_sale_coupon',
         # OCA modules
+        'contract_variable_quantity',
         'account_payment_sale',
         'account_mass_reconcile',
         'auth_signup',
@@ -48,7 +49,7 @@
 
     'external_dependencies': {
         'python': ['magic'],
-        'bin': ['rsvg-convert'],
+        # 'bin': ['rsvg-convert'],
     },
 
     'data': [

@@ -18,7 +18,7 @@
         'queue_job',
     ],
     'external_dependencies': {
-        'bin': ['pdfjam', 'pdftk'],
+        # 'bin': ['pdfjam', 'pdftk'],
     },
     'data': [
         'data/actions.xml',
