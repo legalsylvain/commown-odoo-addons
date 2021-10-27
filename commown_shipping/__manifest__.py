@@ -16,7 +16,7 @@
         "queue_job",
         "server_environment_data_encryption",
     ],
-    "external_dependencies": {"bin": ["pdfjam", "pdftk"]},
+    # "external_dependencies": {"bin": ["pdfjam", "pdftk"]},
     "data": [
         "data/actions.xml",
         "data/cron.xml",
