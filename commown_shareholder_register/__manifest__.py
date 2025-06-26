@@ -29,6 +29,7 @@
     ],
     "demo": [
         "demo/commown_shareholder_register_college.xml",
+        "demo/account_account.xml",
     ],
     "installable": True,
 }

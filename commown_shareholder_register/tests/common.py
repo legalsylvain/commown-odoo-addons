@@ -27,12 +27,18 @@ class TestShareholderRegisterTC(TransactionCase):
         cls.partner_2 = cls.env["res.partner"].create({"name": "Partner 2"})
         cls.partner_3 = cls.env["res.partner"].create({"name": "Partner 3"})
 
-        cls.account_porteur = cls._create_account("10134000", "Porteur de Projet")
-        cls.account_soutien = cls._create_account("10136000", "Account Soutien")
-        cls.account_beneficiaire = cls._create_account(
-            "10135000", "Account Bénéficiaire"
+        cls.account_porteur = cls.env.ref(
+            "commown_shareholder_register.account_porteur"
         )
-        cls.account_balancing = cls._create_account("XXXXXXXX", "Balancing journal")
+        cls.account_soutien = cls.env.ref(
+            "commown_shareholder_register.account_soutien"
+        )
+        cls.account_beneficiaire = cls.env.ref(
+            "commown_shareholder_register.account_beneficiaire"
+        )
+        cls.account_balancing = cls.env.ref(
+            "commown_shareholder_register.account_balancing"
+        )
 
         cls.college_A = cls.env.ref("commown_shareholder_register.college_A")
         cls.college_B = cls.env.ref("commown_shareholder_register.college_B")
@@ -56,17 +62,6 @@ class TestShareholderRegisterTC(TransactionCase):
             cls.college_B,
             1,
         )
-
-    @classmethod
-    def _create_account(cls, code, name):
-        account = cls.env["account.account"].create(
-            {
-                "name": name,
-                "code": code,
-                "account_type": "income_other",
-            }
-        )
-        return account
 
     @classmethod
     def _create_category(cls, name, account, college, min_share_number):

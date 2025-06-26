@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="account_porteur" model="account.account">
+      <field name="code">10134000</field>
+      <field name="name">Porteur de Projet</field>
+      <field name="account_type">income_other</field>
+    </record>
+
+    <record id="account_beneficiaire" model="account.account">
+      <field name="code">10135000</field>
+      <field name="name">Account Bénéficiaire</field>
+      <field name="account_type">income_other</field>
+    </record>
+
+    <record id="account_soutien" model="account.account">
+      <field name="code">10136000</field>
+      <field name="name">Account Soutien</field>
+      <field name="account_type">income_other</field>
+    </record>
+
+    <record id="account_balancing" model="account.account">
+      <field name="code">XXXXXXXX</field>
+      <field name="name">Balancing journal</field>
+      <field name="account_type">income_other</field>
+    </record>
+
+</odoo>
