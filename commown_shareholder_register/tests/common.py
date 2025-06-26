@@ -44,36 +44,11 @@ class TestShareholderRegisterTC(TransactionCase):
         cls.college_B = cls.env.ref("commown_shareholder_register.college_B")
         cls.college_D = cls.env.ref("commown_shareholder_register.college_D")
 
-        cls.cat_porteur = cls._create_category(
-            "Porteur",
-            cls.account_porteur,
-            cls.college_A,
-            100,
+        cls.cat_porteur = cls.env.ref("commown_shareholder_register.cat_porteur")
+        cls.cat_soutien = cls.env.ref("commown_shareholder_register.cat_soutien")
+        cls.cat_beneficiaire = cls.env.ref(
+            "commown_shareholder_register.cat_beneficiaire"
         )
-        cls.cat_soutien = cls._create_category(
-            "Soutien",
-            cls.account_soutien,
-            cls.college_D,
-            5,
-        )
-        cls.cat_beneficiaire = cls._create_category(
-            "Beneficiare",
-            cls.account_beneficiaire,
-            cls.college_B,
-            1,
-        )
-
-    @classmethod
-    def _create_category(cls, name, account, college, min_share_number):
-        category = cls.env["commown_shareholder_register.category"].create(
-            {
-                "name": name,
-                "account_id": account.id,
-                "college_id": college.id,
-                "min_share_number": min_share_number,
-            }
-        )
-        return category
 
     @classmethod
     def _add_shares(cls, partner, account, date_tuple, amount):

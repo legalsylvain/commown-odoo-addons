@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="cat_porteur" model="commown_shareholder_register.category">
+      <field name="name">Porteur</field>
+      <field name="account_id" ref="account_porteur" />
+      <field name="college_id" ref="college_A" />
+      <field name="min_share_number">100</field>
+    </record>
+
+    <record id="cat_beneficiaire" model="commown_shareholder_register.category">
+      <field name="name">Beneficiaire</field>
+      <field name="account_id" ref="account_beneficiaire" />
+      <field name="college_id" ref="college_B" />
+      <field name="min_share_number">1</field>
+    </record>
+
+    <record id="cat_soutien" model="commown_shareholder_register.category">
+      <field name="name">Soutien</field>
+      <field name="account_id" ref="account_soutien" />
+      <field name="college_id" ref="college_D" />
+      <field name="min_share_number">5</field>
+    </record>
+
+</odoo>

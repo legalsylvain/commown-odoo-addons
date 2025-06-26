@@ -30,6 +30,7 @@
     "demo": [
         "demo/commown_shareholder_register_college.xml",
         "demo/account_account.xml",
+        "demo/commown_shareholder_register_category.xml",
     ],
     "installable": True,
 }
